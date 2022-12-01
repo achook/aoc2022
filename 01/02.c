@@ -15,7 +15,8 @@ void compareCalories (int * top1, int * top2, int * top3, int * currentCalories)
 }
 
 int main() {
-    FILE *f = fopen("data.txt", "r");
+    // FILE *f = fopen("test.txt", "r");
+    FILE *f = fopen("input.txt", "r");
     char buf[20];
     int calories;
 
