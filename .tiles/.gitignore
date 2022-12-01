@@ -1,0 +1,5 @@
+# Session cookie
+session.cookie
+
+# Cache directory
+.aoc_tiles_cache/
