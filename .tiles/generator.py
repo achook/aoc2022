@@ -266,7 +266,7 @@ def draw_star(drawer: ImageDraw, at: tuple[int, int], size=9, color="#ffff0022",
     drawer.polygon(points, fill=color)
 
 
-def generate_day_tile_image(day: str, year: str, languages: list[str], day_scores: DayScores | None) -> Path:
+def generate_day_tile_image(day: str, languages: list[str], day_scores: DayScores | None) -> Path:
     """Saves a graphic for a given day and year. Returns the path to it."""
     image = get_alternating_background(languages, not (day_scores is None or day_scores.time2 is None))
     drawer = ImageDraw(image)
@@ -305,7 +305,7 @@ def generate_day_tile_image(day: str, year: str, languages: list[str], day_score
     drawer.line((100, 5, 100, 95), fill=font_color, width=1)
     drawer.line((105, 50, 195, 50), fill=font_color, width=1)
 
-    path = IMAGE_DIR / f"{year}/{day}.png"
+    path = IMAGE_DIR / f"{day}.png"
     path.parent.mkdir(parents=True, exist_ok=True)
     image.save(path)
     return path
@@ -321,7 +321,7 @@ def handle_day(day: int, year: int, solutions: list[str], html: HTML, day_scores
     if DEBUG:
         if day == 25:
             languages = []
-    day_graphic_path = generate_day_tile_image(f"{day:02}", f"{year:04}", languages, day_scores)
+    day_graphic_path = generate_day_tile_image(f"{day:02}", languages, day_scores)
     day_graphic_path = day_graphic_path.relative_to(AOC_DIR)
     with html.tag("a", href=str(solution_link)):
         html.tag("img", closing=False, src=str(day_graphic_path), width=TILE_WIDTH_PX)
