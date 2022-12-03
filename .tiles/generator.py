@@ -39,6 +39,8 @@ SHOW_CHECKMARK_INSTEAD_OF_TIME_RANK = True
 # a number from the folder and tries to guess its day that way.
 DAY_PATTERN = r"\d{2}"
 
+YEAR = 2022
+
 
 # You can change this code entirely, or just change patterns above. You get more control if you change the code.
 def get_solution_paths_dict_for_years() -> dict[int, dict[int, list[str]]]:
