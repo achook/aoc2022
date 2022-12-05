@@ -18,4 +18,7 @@ For details on the Advent of Code, see https://adventofcode.com/
 <a href="04/01.js">
   <img src=".tiles/media/04.png" width="161px">
 </a>
+<a href="05/01.py">
+  <img src=".tiles/media/05.png" width="161px">
+</a>
 <!-- AOC TILES END -->
