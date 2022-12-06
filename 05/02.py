@@ -9,10 +9,7 @@ with open("input.txt", "r") as file:
 
         pos = 1
         i = 0
-        while True:
-            if pos >= len(line):
-                break
-
+        while pos < len(line):
             if i >= len(ship):
                 ship.append([])
 

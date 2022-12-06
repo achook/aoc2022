@@ -175,11 +175,6 @@ def parse_leaderboard(leaderboard_path: Path) -> dict[int, DayScores]:
 
 def request_leaderboard(year: int) -> dict[int, DayScores]:
     leaderboard_path = CACHE_DIR / f"leaderboard{year}.html"
-    if leaderboard_path.exists():
-        leaderboard = parse_leaderboard(leaderboard_path)
-        has_no_none_values = all(itertools.chain(map(list, leaderboard.values())))
-        if has_no_none_values:
-            return leaderboard
     with open(SESSION_COOKIE_PATH) as cookie_file:
         session_cookie = cookie_file.read().strip()
         data = requests.get(PERSONAL_LEADERBOARD_URL.format(year=year), cookies={"session": session_cookie}).text
