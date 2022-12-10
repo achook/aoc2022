@@ -33,4 +33,7 @@ For details on the Advent of Code, see https://adventofcode.com/
 <a href="09/01.py">
   <img src=".tiles/media/09.png" width="161px">
 </a>
+<a href="10/01.go">
+  <img src=".tiles/media/10.png" width="161px">
+</a>
 <!-- AOC TILES END -->
