@@ -42,4 +42,10 @@ For details on the Advent of Code, see https://adventofcode.com/
 <a href="12/01.py">
   <img src=".tiles/media/12.png" width="161px">
 </a>
+<a href="13/01.py">
+  <img src=".tiles/media/13.png" width="161px">
+</a>
+<a href="14/01.py">
+  <img src=".tiles/media/14.png" width="161px">
+</a>
 <!-- AOC TILES END -->
